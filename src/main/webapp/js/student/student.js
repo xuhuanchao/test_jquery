@@ -48,11 +48,11 @@ $(function() {
 	 * 查询列表
 	 */
 	function queryStudent(params){
-//		alert(JSON.stringify(params));
 		$.ajax({
 			url : service.queryStudent,  //basepath + "/student/queryByName",
-			data : JSON.stringify(params),
-			contentType: "application/json; charset=UTF-8",
+			data : params,
+//			data : JSON.stringify(params),
+//			contentType: "application/json; charset=UTF-8", 默认application/x-www-form-urlencoded
 			dataType : 'json',
 			type : 'post',
 			headers : {
